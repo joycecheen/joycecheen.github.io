@@ -1,35 +1,113 @@
-*#stop-motion-animation > div{
-    width:120px;
-    height:120px;
-    white-space:nowrap;
-    overflow:hidden;
+body {
+    margin: 0;
+    padding: 0;
+}
+.box {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: calc(6501px / 11);
+    height: 422px;
+    background: url(mikosprite.png);
+    animation: animate 1s stepts(11) infinite;
+}
+@keyframes animate {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -6501px;
+    }
+}
+
+/**#stop-motion-animation > div{
+    width:591px;
+    height:422px;
+    background-image:url(mikowalklong.png);
+    background-repeat:no-repeat;
     -webkit-animation-name:ani;
-    -webkit-animation-duration:0.5s,20s;
-    -webkit-animation-timing-function:steps(11),ease;
+    -webkit-animation-duration:0.6s;
+    -webkit-animation-timing-function:steps(1);
     -webkit-animation-iteration-count:infinite;
-    -webkit-animation-direction:normal,alternate;
-    -webkit-animation-play-state:paused,running;
+    -webkit-animation-play-state:paused;
     animation-name:ani;
-    animation-duration:0.5s,20s;
-    animation-timing-function:steps(11),ease;
+    animation-duration:0.6s;
+    animation-timing-function:steps(1);
     animation-iteration-count:infinite;
-    animation-direction:normal,alternate;
-    animation-play-state:paused,running;
+    animation-play-state:paused;
    }
    *#stop-motion-animation > div:hover{
     -webkit-animation-play-state:running;
     animation-play-state:running;
    }
-   *#stop-motion-animation > div img{
-    vertical-align:middle;
-   }
    @-webkit-keyframes ani{
+    9.09%{
+     background-position:-591px 0;
+    }
+    18.18%{
+     background-position:-1182px 0;
+    }
+    27.27%{
+     background-position:-1773px 0;
+    }
+    36.36%{
+     background-position:-2364px 0;
+    }
+    45.45%{
+     background-position:-2955px 0;
+    }
+    54.54%{
+    background-position:-3546px 0;
+    }
+    63.63%{
+    background-position:-4137px 0;
+    }
+    72.73%{
+    background-position:-4728px 0;
+    }
+    81.82%{
+    background-position:-5319px 0;
+    }
+    90.91%{
+    background-position:-5910px 0;
+    }
     100%{
-        text-indent:-600px;
-       }
+    background-position:-6501px 0;
+    }
    }
    @keyframes ani{
+    9.09%{
+    background-position:-591px 0;
+    }
+    18.18%{
+    background-position:-1182px 0;
+    }
+    27.27%{
+    background-position:-1773px 0;
+    }
+    36.36%{
+    background-position:-2364px 0;
+    }
+    45.45%{
+    background-position:-2955px 0;
+    }
+    54.54%{
+    background-position:-3546px 0;
+    }
+    63.63%{
+    background-position:-4137px 0;
+    }
+    72.73%{
+    background-position:-4728px 0;
+    }
+    81.82%{
+    background-position:-5319px 0;
+    }
+    90.91%{
+    background-position:-5910px 0;
+    }
     100%{
-        text-indent:-600px;
-       }
-   }
+    background-position:-6501px 0;
+    }
+   }*/
