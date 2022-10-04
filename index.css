@@ -1,0 +1,35 @@
+*#stop-motion-animation > div{
+    width:120px;
+    height:120px;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation-name:ani;
+    -webkit-animation-duration:0.5s,20s;
+    -webkit-animation-timing-function:steps(11),ease;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal,alternate;
+    -webkit-animation-play-state:paused,running;
+    animation-name:ani;
+    animation-duration:0.5s,20s;
+    animation-timing-function:steps(11),ease;
+    animation-iteration-count:infinite;
+    animation-direction:normal,alternate;
+    animation-play-state:paused,running;
+   }
+   *#stop-motion-animation > div:hover{
+    -webkit-animation-play-state:running;
+    animation-play-state:running;
+   }
+   *#stop-motion-animation > div img{
+    vertical-align:middle;
+   }
+   @-webkit-keyframes ani{
+    100%{
+     text-indent:-600px;
+    }
+   }
+   @keyframes ani{
+    100%{
+     text-indent:-600px;
+    }
+   }
