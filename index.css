@@ -25,11 +25,11 @@
    }
    @-webkit-keyframes ani{
     100%{
-     text-indent:-600px;
-    }
+        text-indent:-600px;
+       }
    }
    @keyframes ani{
     100%{
-     text-indent:-600px;
-    }
+        text-indent:-600px;
+       }
    }
