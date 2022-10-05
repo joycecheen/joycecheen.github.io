@@ -1,113 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600&display=swap');
+
 body {
     margin: 0;
     padding: 0;
+    background: #dde1e7;
 }
-.box {
+#wrapper {
     position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width: calc(6501px / 11);
-    height: 422px;
-    background: url(mikosprite.png);
-    animation: animate 1s stepts(11) infinite;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
 }
-@keyframes animate {
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* nav bar */
+.container {
+    display: table;
+    width: 100%;
+}
+.table-row {
+    display: table-row;
+    height: 10%
+}
+.table-cell {
+    display: table-cell;
+}
+.title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 2vw;
+    left: 1.8%;
+    position: fixed;
+}
+ul {
+    position: fixed;
+    list-style-type: none;
+    right:2%;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 2vw;
+    font-weight: 600;
+}
+ul li{
+    display: inline;
+    margin-left: 0.3em;
+}
+a {
+    color: #000000;
+}
+a:link { 
+    text-decoration: none; 
+}
+a:visited { text-decoration: none; }
+a:hover { 
+    text-decoration: none; 
+}
+a:active { text-decoration: none; }
+
+/* left nav miko */
+.sprite_left {
+    background: url(sprite_left.png);
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: calc(1849px / 11);
+    height: 120px;
+    animation: anim 1s steps(11) infinite;
+    animation-play-state:paused; 
+}
+.sprite_left:hover {
+    animation-play-state:running;
+}
+@keyframes anim {
     from {
         background-position: 0;
     }
     to {
-        background-position: -6501px;
+        background-position: -1849px;
     }
 }
 
-/**#stop-motion-animation > div{
-    width:591px;
-    height:422px;
-    background-image:url(mikowalklong.png);
-    background-repeat:no-repeat;
-    -webkit-animation-name:ani;
-    -webkit-animation-duration:0.6s;
-    -webkit-animation-timing-function:steps(1);
-    -webkit-animation-iteration-count:infinite;
-    -webkit-animation-play-state:paused;
-    animation-name:ani;
-    animation-duration:0.6s;
-    animation-timing-function:steps(1);
-    animation-iteration-count:infinite;
+/* right nav miko */
+.sprite_right {
+    background: url(sprite_right.png);
+    position: fixed;
+    bottom:0;
+    right:0;
+    width: calc(1849px / 11);
+    height: 120px;
+    animation: ani 1s steps(11) infinite;
     animation-play-state:paused;
-   }
-   *#stop-motion-animation > div:hover{
-    -webkit-animation-play-state:running;
+    
+}
+.sprite_right:hover {
     animation-play-state:running;
-   }
-   @-webkit-keyframes ani{
-    9.09%{
-     background-position:-591px 0;
+}
+@keyframes ani {
+    from {
+        background-position: 0;
     }
-    18.18%{
-     background-position:-1182px 0;
+    to {
+        background-position: 1849px;
     }
-    27.27%{
-     background-position:-1773px 0;
-    }
-    36.36%{
-     background-position:-2364px 0;
-    }
-    45.45%{
-     background-position:-2955px 0;
-    }
-    54.54%{
-    background-position:-3546px 0;
-    }
-    63.63%{
-    background-position:-4137px 0;
-    }
-    72.73%{
-    background-position:-4728px 0;
-    }
-    81.82%{
-    background-position:-5319px 0;
-    }
-    90.91%{
-    background-position:-5910px 0;
-    }
-    100%{
-    background-position:-6501px 0;
-    }
-   }
-   @keyframes ani{
-    9.09%{
-    background-position:-591px 0;
-    }
-    18.18%{
-    background-position:-1182px 0;
-    }
-    27.27%{
-    background-position:-1773px 0;
-    }
-    36.36%{
-    background-position:-2364px 0;
-    }
-    45.45%{
-    background-position:-2955px 0;
-    }
-    54.54%{
-    background-position:-3546px 0;
-    }
-    63.63%{
-    background-position:-4137px 0;
-    }
-    72.73%{
-    background-position:-4728px 0;
-    }
-    81.82%{
-    background-position:-5319px 0;
-    }
-    90.91%{
-    background-position:-5910px 0;
-    }
-    100%{
-    background-position:-6501px 0;
-    }
-   }*/
+}
+
+.linkSpanner{
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
