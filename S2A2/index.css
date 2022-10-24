@@ -6,6 +6,7 @@ div{
 }
 
 .parent {
+    overflow: hidden;
     display: grid;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -18,7 +19,12 @@ div{
 .div1 { grid-area: 1 / 2 / 2 / 4;}
 .div2 { grid-area: 1 / 4 / 3 / 5;}
 .div3 { grid-area: 3 / 4 / 4 / 6;}
-.div4 { grid-area: 2 / 2 / 4 / 3;}
+.div4 { grid-area: 2 / 2 / 4 / 3; 
+        /* background: url(pics/seaside.jpg);
+        background-size: contain;
+        animation: anim 1s steps(1);
+        animation-play-state:paused;*/
+    } 
 .div5 { grid-area: 1 / 6 / 2 / 8;}
 .div6 { grid-area: 2 / 7 / 4 / 8;}
 .div7 { grid-area: 1 / 5 / 2 / 6;}
@@ -28,35 +34,125 @@ div{
 .div11 { grid-area: 3 / 3 / 4 / 4;}
 .div12 { grid-area: 3 / 6 / 4 / 7;}
 
+.div01 { grid-area: 1 / 2 / 2 / 4; z-index: 10;}
+.div02 { grid-area: 1 / 4 / 3 / 5; z-index: 10;}
+.div03 { grid-area: 3 / 4 / 4 / 6; z-index: 10;}
+.div04 { grid-area: 2 / 2 / 4 / 3; z-index: 10;}
+.div05 { grid-area: 1 / 6 / 2 / 8; z-index: 10;}
+.div06 { grid-area: 2 / 7 / 4 / 8; z-index: 10;}
+.div07 { grid-area: 1 / 5 / 2 / 6; z-index: 10;}
+.div08 { grid-area: 2 / 3 / 3 / 4; z-index: 10;}
+.div09 { grid-area: 2 / 5 / 3 / 6; z-index: 10;}
+.div010 { grid-area: 2 / 6 / 3 / 7; z-index: 10;}
+.div011 { grid-area: 3 / 3 / 4 / 4; z-index: 10;}
+.div012 { grid-area: 3 / 6 / 4 / 7; z-index: 10;}
+
 .diva { grid-area: 1 / 2 / 2 / 3;}
 .divb { grid-area: 1 / 4 / 2 / 5;}
 .divc { grid-area: 3 / 4 / 4 / 5;}
-.divd { grid-area: 2 / 2 / 3 / 3;}
-.dive { grid-area: 1 / 6 / 2 / 7;}
+.divd { grid-area: 3 / 2 / 3 / 3;}
+.dive { grid-area: 1 / 7 / 2 / 7;}
 .divf { grid-area: 2 / 7 / 3 / 8;}
+
+.test {
+    grid-area: 2 / 2 / 4 / 3;
+    content: url(pics/seaside.jpg);
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.div04:hover ~ .test{
+    transform: translateY(-100%);
+    transition: all 0.4s ease;
+}
+
+/* .test {
+    position: relative;
+    content: url(pics/seaside.jpg);
+    top: 100%;
+    transition: all .3s ease-out;
+    height:100%;
+}
+.div04:hover > .test {
+    top: 0;
+    
+} */
+
+/* .img4 {
+    max-width: 103%;
+    height: auto;
+    top: 100%;
+    position: relative;
+    transition: all 0.4s ease;
+}
+.div04:hover > .img4 {
+    top: 50%;
+} */
+
+.shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 150px;
+}
 
 .indent {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    border-radius: 100px;
-    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+    border-radius: 150px;
+    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.5);
 }
 
 .hbutton {
+  transition: all 0.4s ease;
   position: relative;
   border-radius: 50%;
   background-color: #dde1e7;
   box-shadow: 5px 5px 9px rgba(94,104,121,0.3), inset 5px 5px 9px rgba(255,255,255,0.35);
 }
-.div1:hover ~ .diva{
-    transform: translateX(100%);
-    transition: all 1.5s ease;
-}
-
 .vbutton {
+    transition: all 0.4s ease;
     position: relative;
     border-radius: 50%;
+    background-color: #dde1e7;
     box-shadow: 5px 5px 9px rgba(94,104,121,0.3), inset 5px 5px 9px rgba(255,255,255,0.65);
+}
+
+/* horizontal button animations */
+.div01:hover ~ .diva{
+    transform: translateX(100%);
+    transition: all 0.4s ease;
+}
+
+.div03:hover ~ .divc{
+    transform: translateX(100%);
+    transition: all 0.4s ease;
+}
+
+.div05:hover ~ .dive{
+    transform: translateX(-100%);
+    transition: all 0.4s ease;
+}
+
+/* vertical button animations */
+.div02:hover ~ .divb{
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+}
+.div04:hover ~ .divd{
+    transform: translateY(-100%);
+    transition: all 0.4s ease;
+}
+.div06:hover ~ .divf{
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+}
+
+img {
+    
 }
