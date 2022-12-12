@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+canvas {
+    display: block;
+}  
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+}
+
+.pcenter {
+    height: 100vh;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    z-index: 20;
+    position: relative;
+}
+
+.p {
+    font-family: monospace;
+    color: white;
+    opacity:0;
+}
+
+.divy {
+    width: 100%; 
+    height: 100%; 
+    position: fixed;
+}
+
+.divy:hover .p{
+    opacity: 1;
+}
