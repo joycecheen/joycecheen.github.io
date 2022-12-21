@@ -12,30 +12,7 @@ var div3 = document.getElementById("div3");
 div3.addEventListener("dblclick", function() {
     window.location = "sec3.html";
 });
-/*
-div1.addEventListener("focus", focusHandler);
-function focusHandler() {
-    div1.classList.add("highlight");
+
+function basicPopup(url) {
+    popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
 }
-
-function clickFunction() {
-    alert("The div was clicked!");
-}
-
-function addClass() {
-    
-}
-
-/*div1.addEventListener("click", function() {
-    
-});
-
-function focusDiv() {
-    var div1 = document.getElementById("div1");
-    div1.focus();
-}
-
-/*
-function dblclickFunction() {
-    window.location = "sec1.html";
-}*/

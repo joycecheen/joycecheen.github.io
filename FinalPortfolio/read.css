@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+.p1 {
+    font-family: 'Inconsolata', monospace;
+}
+
+.p2 {
+    font-family: 'Inconsolata', monospace;
+    margin-left:5%; margin-right:5%;
+}
